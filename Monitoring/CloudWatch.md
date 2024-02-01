@@ -39,6 +39,6 @@ nav_order: CloudWatch
 ## Logs
 * Logs expiration is default `never` but can be configured
 
-# Reference:
+## Reference:
 * [AWS Documentation](https://docs.aws.amazon.com/cloudwatch/)
 * [Abdur's Notes](https://notes.arkalim.org/notes/aws%20solutions%20architect%20associate/cloudwatch/)

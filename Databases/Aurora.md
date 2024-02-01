@@ -39,6 +39,6 @@ nav_order: Aurora
 	* Upto 16 replicas per region
 * Reduce latency and provides high availability
 
-# Reference:
+## Reference:
 * [AWS Documentation](https://docs.aws.amazon.com/AmazonRDS/latest/AuroraUserGuide/CHAP_AuroraOverview.html)
 * [Abdur's Notes](https://notes.arkalim.org/notes/aws%20solutions%20architect%20associate/aurora/)

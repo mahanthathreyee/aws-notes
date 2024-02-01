@@ -37,6 +37,6 @@ nav_order: Auto Scaling Group
 	- Delete the instance which is closest to the next billing hour
 	- Choose at random
 
-# Reference:
+## Reference:
 * [AWS Documentation](https://docs.aws.amazon.com/autoscaling/)
 * [Abdur's Notes](https://notes.arkalim.org/notes/aws%20solutions%20architect%20associate/auto%20scaling%20group%20(asg)/)

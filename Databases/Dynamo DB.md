@@ -36,6 +36,6 @@ nav_order: Dynamo DB
 	* Active-Active Replication
 * **DynamoDB Streams must be enabled**
 
-# Reference:
+## Reference:
 * [AWS Documentation](https://docs.aws.amazon.com/dynamodb/)
 * [Abdur's Notes](https://notes.arkalim.org/notes/aws%20solutions%20architect%20associate/dynamodb/)
