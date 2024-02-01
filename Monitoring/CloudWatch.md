@@ -1,4 +1,21 @@
+---
+title: CloudWatch
+parent: Monitoring and Logging
+layout: default
+nav_order: CloudWatch
+---
+
 # CloudWatch
+{: .no_toc }
+
+## Table of contents
+{: .no_toc .text-delta }
+
+1. TOC
+{:toc}
+
+---
+
 ## EC2
 * EC2 requires `CloudWatch agent` to be installed. (IAM must be enabled)
 * Available metrics: 
@@ -21,3 +38,7 @@
 
 ## Logs
 * Logs expiration is default `never` but can be configured
+
+# Reference:
+* [AWS Documentation](https://docs.aws.amazon.com/cloudwatch/)
+* [Abdur's Notes](https://notes.arkalim.org/notes/aws%20solutions%20architect%20associate/cloudwatch/)

@@ -1,4 +1,21 @@
+---
+title: Auto Scaling Group
+parent: Compute
+layout: default
+nav_order: Auto Scaling Group
+---
+
 # Auto Scaling Group
+{: .no_toc }
+
+## Table of contents
+{: .no_toc .text-delta }
+
+1. TOC
+{:toc}
+
+---
+
 - A instance can only be part one ASG at a time
 * Scaling Policies
 	* Scheduled
@@ -19,3 +36,7 @@
 	- Delete the instance with the oldest launch configuration
 	- Delete the instance which is closest to the next billing hour
 	- Choose at random
+
+# Reference:
+* [AWS Documentation](https://docs.aws.amazon.com/autoscaling/)
+* [Abdur's Notes](https://notes.arkalim.org/notes/aws%20solutions%20architect%20associate/auto%20scaling%20group%20(asg)/)
