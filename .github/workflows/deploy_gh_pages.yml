@@ -18,36 +18,45 @@ concurrency:
 jobs:
     install-dependencies:
         runs-on: ubuntu-latest
+        environment: github-pages
         steps:
-            - uses: actions/setup-python@v5
+            - name: Configuring python 
+              uses: actions/setup-python@v5
               with:
                   python-version: 3.x
-            - run: echo "cache_id=$(date --utc '+%V')" >> $GITHUB_ENV
-            - uses: actions/cache@v4
+
+            - name: Configuring cache
+              run: echo "cache_id=$(date --utc '+%V')" >> $GITHUB_ENV
+              
+            - name: Retrieving cache
+              uses: actions/cache@v4
               with:
                   key: mkdocs-material-${{ env.cache_id }}
                   path: .cache
                   restore-keys: |
                       mkdocs-material-
-            - name: checkout repo 
-              uses: actions/checkout@v4
-            - run: pip install -r requirements.txt
 
-    generate-static-pages:
-        runs-on: ubuntu-latest
-        needs: install-dependencies
-        steps:
+            - name: Checkout branch
+              uses: actions/checkout@v4
+            
+            - name: Installing Dependencies
+              run: pip install -r requirements.txt
+
             - name: checkout repo 
               uses: actions/checkout@v4
+
             - name: Configure Git Credentials
               run: |
                   git config user.name github-actions[bot]
                   git config user.email 41898282+github-actions[bot]@users.noreply.github.com
-            - run: mkdocs gh-deploy --force
+            
+            - name: Generating static pages
+              run: mkdocs gh-deploy --force
 
     upload-pages-artifact:
         runs-on: ubuntu-latest
-        needs: generate-static-pages
+        environment: github-pages
+        needs: install-dependencies
         steps:
             - name: Upload Pages Artifact
               uses: actions/upload-pages-artifact@v1
