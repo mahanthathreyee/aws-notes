@@ -29,6 +29,8 @@ jobs:
                   path: .cache
                   restore-keys: |
                       mkdocs-material-
+            - name: checkout repo 
+              uses: actions/checkout@v4
             - run: pip install -r requirements.txt
 
     generate-static-pages:
