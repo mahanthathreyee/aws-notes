@@ -3,6 +3,7 @@ on:
     push:
         branches:
             - main
+            - feature/workflow-deployment
 permissions:
     contents: write
 jobs:
