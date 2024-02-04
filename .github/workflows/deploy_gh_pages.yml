@@ -42,7 +42,7 @@ jobs:
                       mkdocs-material-
 
             - name: Checkout branch
-              uses: actions/checkout@4.1.1
+              uses: actions/checkout@v4.1.1
             
             - name: Installing Dependencies
               run: pip install -r requirements.txt
@@ -63,10 +63,10 @@ jobs:
                 ref: gh-pages
 
             - name: Upload Pages Artifact
-              uses: actions/upload-pages-artifact@3.0.0
+              uses: actions/upload-pages-artifact@v3.0.0
               with:
                 path: .
 
             - name: Deploy to GitHub Pages
               id: deployment
-              uses: actions/deploy-pages@4.0.3
+              uses: actions/deploy-pages@v4.0.3
