@@ -21,7 +21,7 @@ jobs:
         environment: github-pages
         steps:
             - name: Configuring python 
-              uses: actions/setup-python@latest
+              uses: actions/setup-python@v5.0.0
               with:
                   python-version: 3.x
 
@@ -32,10 +32,9 @@ jobs:
               run: |
                   git config user.name github-actions[bot]
                   git config user.email 41898282+github-actions[bot]@users.noreply.github.com
-            
 
             - name: Retrieving cache
-              uses: actions/cache@latest
+              uses: actions/cache@v4.0.0
               with:
                   key: mkdocs-material-${{ env.cache_id }}
                   path: ~/.cache/pip
@@ -43,7 +42,7 @@ jobs:
                       mkdocs-material-
 
             - name: Checkout branch
-              uses: actions/checkout@latest
+              uses: actions/checkout@4.1.1
             
             - name: Installing Dependencies
               run: pip install -r requirements.txt
@@ -59,15 +58,15 @@ jobs:
             url: ${{ steps.deployment.outputs.page_url }}
         steps:
             - name: Checkout to Static Site Branch
-              uses: actions/checkout@latest
+              uses: actions/checkout@v4.1.1
               with:
                 ref: gh-pages
 
             - name: Upload Pages Artifact
-              uses: actions/upload-pages-artifact@latest
+              uses: actions/upload-pages-artifact@3.0.0
               with:
                 path: .
 
             - name: Deploy to GitHub Pages
               id: deployment
-              uses: actions/deploy-pages@latest
+              uses: actions/deploy-pages@4.0.3
