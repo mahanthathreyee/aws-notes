@@ -16,14 +16,6 @@ concurrency:
   cancel-in-progress: true
 
 jobs:
-    configure-git:
-        runs-on: ubuntu-latest
-        steps:
-            - uses: actions/checkout@v4
-            - name: Configure Git Credentials
-              run: |
-                  git config user.name github-actions[bot]
-                  git config user.email 41898282+github-actions[bot]@users.noreply.github.com
     install-dependencies:
         runs-on: ubuntu-latest
         steps:
@@ -43,6 +35,10 @@ jobs:
         steps:
             - name: checkout repo 
               uses: actions/checkout@v4
+            - name: Configure Git Credentials
+              run: |
+                  git config user.name github-actions[bot]
+                  git config user.email 41898282+github-actions[bot]@users.noreply.github.com
             - run: pip install -r requirements.txt
             - run: mkdocs gh-deploy --force
 
