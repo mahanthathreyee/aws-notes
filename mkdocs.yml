@@ -1,0 +1,28 @@
+site_name: My Docs
+repo_url: https://github.com/mahanthathreyee/aws-notes
+edit_uri: edit/main/
+
+theme:
+    name: material
+    palette:
+        scheme: slate
+        primary: custom
+    font:
+        text: Inter
+    features:
+        - navigation.path
+        - navigation.indexes
+        - navigation.instant
+        - navigation.tracking
+        - toc.follow
+
+markdown_extensions:
+  - toc:
+      permalink: true
+
+plugins:
+  - git-revision-date-localized:
+      enable_creation_date: false
+
+extra_css:
+    - stylesheets/extra.css
