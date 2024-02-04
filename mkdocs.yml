@@ -1,0 +1,12 @@
+site_name: My Docs
+theme:
+    name: material
+    palette:
+        scheme: slate
+        primary: custom
+    font:
+        text: Inter
+    features:
+        - navigation.path
+extra_css:
+    - stylesheets/extra.css
