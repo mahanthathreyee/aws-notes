@@ -17,7 +17,6 @@ jobs:
                   git config user.email 41898282+github-actions[bot]@users.noreply.github.com
     install-dependencies:
         runs-on: ubuntu-latest
-        needs: configure-git
         steps:
             - uses: actions/setup-python@v5
               with:
@@ -31,8 +30,10 @@ jobs:
                       mkdocs-material-
     generate-static-pages:
         runs-on: ubuntu-latest
-        needs: install-dependencies
+        needs: [configure-git, install-dependencies]
         steps:
+            - name: checkout repo 
+              uses: actions/checkout@v2.3.4
             - run: pip install -r requirements.txt
             - run: mkdocs gh-deploy --force
     deploy:
