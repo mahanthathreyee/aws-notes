@@ -21,15 +21,21 @@ jobs:
         environment: github-pages
         steps:
             - name: Configuring python 
-              uses: actions/setup-python@v5
+              uses: actions/setup-python@latest
               with:
                   python-version: 3.x
 
             - name: Configuring cache
               run: echo "cache_id=$(date --utc '+%V')" >> $GITHUB_ENV
 
+            - name: Configure Git Credentials
+              run: |
+                  git config user.name github-actions[bot]
+                  git config user.email 41898282+github-actions[bot]@users.noreply.github.com
+            
+
             - name: Retrieving cache
-              uses: actions/cache@v4
+              uses: actions/cache@latest
               with:
                   key: mkdocs-material-${{ env.cache_id }}
                   path: ~/.cache/pip
@@ -37,19 +43,11 @@ jobs:
                       mkdocs-material-
 
             - name: Checkout branch
-              uses: actions/checkout@v4
+              uses: actions/checkout@latest
             
             - name: Installing Dependencies
               run: pip install -r requirements.txt
 
-            - name: Checkout Repo 
-              uses: actions/checkout@v4
-
-            - name: Configure Git Credentials
-              run: |
-                  git config user.name github-actions[bot]
-                  git config user.email 41898282+github-actions[bot]@users.noreply.github.com
-            
             - name: Generating static pages
               run: mkdocs gh-deploy --force
 
@@ -61,15 +59,15 @@ jobs:
             url: ${{ steps.deployment.outputs.page_url }}
         steps:
             - name: Checkout to Static Site Branch
-              uses: actions/checkout@v4
+              uses: actions/checkout@latest
               with:
                 ref: gh-pages
 
             - name: Upload Pages Artifact
-              uses: actions/upload-pages-artifact@v1
+              uses: actions/upload-pages-artifact@latest
               with:
                 path: .
 
             - name: Deploy to GitHub Pages
               id: deployment
-              uses: actions/deploy-pages@v2
+              uses: actions/deploy-pages@latest
