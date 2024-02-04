@@ -27,7 +27,7 @@ jobs:
 
             - name: Configuring cache
               run: echo "cache_id=$(date --utc '+%V')" >> $GITHUB_ENV
-              
+
             - name: Retrieving cache
               uses: actions/cache@v4
               with:
@@ -42,7 +42,7 @@ jobs:
             - name: Installing Dependencies
               run: pip install -r requirements.txt
 
-            - name: checkout repo 
+            - name: Checkout Repo 
               uses: actions/checkout@v4
 
             - name: Configure Git Credentials
@@ -53,27 +53,21 @@ jobs:
             - name: Generating static pages
               run: mkdocs gh-deploy --force
 
-    upload-pages-artifact:
-        runs-on: ubuntu-latest
-        environment: github-pages
-        needs: install-dependencies
-        steps:
-            - name: Upload Pages Artifact
-              uses: actions/upload-pages-artifact@v1
-              with:
-                path: /
-
     deploy-github-pages:
         runs-on: ubuntu-latest
-        needs: upload-pages-artifact
+        needs: install-dependencies
         environment:
             name: github-pages
             url: ${{ steps.deployment.outputs.page_url }}
         steps:
-            - name: checkout repo 
+            - name: Checkout to Static Site Branch
               uses: actions/checkout@v4
               with:
                 ref: gh-pages
+            - name: Upload Pages Artifact
+              uses: actions/upload-pages-artifact@v1
+              with:
+                path: /
             - name: Deploy to GitHub Pages
               id: deployment
               uses: actions/deploy-pages@v2
