@@ -4,8 +4,8 @@
     --md-accent-fg-color: #F4562A;
      
     
-    --md-typeset-heading-color: #E7ECEF;
-    --md-typeset-color: #DAE2E7;
+    --md-typeset-heading-color: #E7EBEF;
+    --md-typeset-color: #C2CED6;
     --md-typeset-a-color: #3185FC;
 }
 
@@ -18,7 +18,6 @@
 .md-typeset h2, 
 .md-typeset h3, 
 .md-typeset h4 {
-    font-weight: 600;
     color: var(--md-typeset-heading-color);
 }
 
