@@ -1,27 +1,11 @@
----
-title: CloudFront
-parent: Serverless
-layout: default
-nav_order: CloudFront
----
-
 # CloudFront
-{: .no_toc }
-
-## Table of contents
-{: .no_toc .text-delta }
-
-1. TOC
-{:toc}
-
----
-* Global CDN
-* Capable of configuring Geo restriction
-* Deploy WAF for IP blocking
+- Global CDN
+- Capable of configuring Geo restriction
+- Deploy WAF for IP blocking
 
 ## Signed URL / Cookies
-* Allows for making content private and restrict access
-* Signed URL = access to individual files
+- Allows for making content private and restrict access
+- Signed URL = access to individual files
 - Signed Cookies = access to multiple files
 
 ## Pricing
@@ -33,6 +17,6 @@ nav_order: CloudFront
 - Allows for failover to secondary
 - The secondary can be in a different region
 
-## Reference:
-* [AWS Documentation](https://docs.aws.amazon.com/cloudfront/)
-* [Abdur's Notes](https://notes.arkalim.org/notes/aws%20solutions%20architect%20associate/cloudfront/)
+## Reference
+- [AWS Documentation](https://docs.aws.amazon.com/cloudfront/)
+- [Abdur's Notes](https://notes.arkalim.org/notes/aws%20solutions%20architect%20associate/cloudfront/)

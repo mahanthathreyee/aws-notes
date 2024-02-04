@@ -1,12 +1,4 @@
----
-title: Monitoring and Logging
-has_children: true
-layout: default
-nav_order: Monitoring and Logging
----
-
 # Monitoring and Logging
-{: .no_toc }
  
 AWS observability lets you collect, correlate, aggregate, and analyze telemetry in your network, infrastructure, and applications in the cloud, hybrid, or on-premises environments so you can gain insights into the behavior, performance, and health of your system. These insights help you detect, investigate, and remediate problems faster; and coupled with artificial intelligence and machine learning, proactively react, predict, and prevent problems.
  

@@ -26,3 +26,6 @@
     color: var(--md-accent-fg-color);
 }
 
+.md-search__icon[for="__search"] {
+    color: var(--md-typeset-color);
+}

@@ -1,12 +1,4 @@
----
-title: Storage
-has_children: true
-layout: default
-nav_order: Storage
----
-
 # Storage
-{: .no_toc }
 
 Amazon Web Services (AWS) offers a broad portfolio of reliable, scalable, and secure storage services for storing, accessing, protecting, and analyzing your data. This makes it easier to match your storage methods with your needs, and provides storage options that are not easily achievable with on-premises infrastructure. When selecting a storage service, ensuring that it aligns with your access patterns will be critical to achieving the performance you want.  
 

@@ -1,12 +1,4 @@
----
-title: Compute
-has_children: true
-layout: default
-nav_order: Compute
----
-
 # Compute
-{: .no_toc }
  
 AWS offers the broadest and deepest functionality for compute. Amazon Elastic Compute Cloud (EC2) offers granular control for managing your infrastructure with the choice of processors, storage, and networking. AWS container services offer the best choice and flexibility of services to run your containers. AWS Lambda enables you to run code in response to events from more than 150 natively integrated AWS and software as a service (SaaS) sources.
 

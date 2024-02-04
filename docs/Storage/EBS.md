@@ -1,26 +1,10 @@
----
-title: EBS
-parent: Storage
-layout: default
-nav_order: EBS
----
-
 # EBS
-{: .no_toc }
-
-## Table of contents
-{: .no_toc .text-delta }
-
-1. TOC
-{:toc}
-
----
 - **Bound to an AZ**
 - Must provision capacity in advance (size in GB & throughput in IOPS
 - To replicate an EBS volume across AZ or region, need to copy its snapshot
 - EBS Multi-attach allows the same EBS volume to attach to multiple EC2 instances **in the same AZ**
 
-# Types
+## Types
 - General Purpose SSD
 	- gp3
 	- gp2
@@ -49,6 +33,6 @@ nav_order: EBS
 ## Snapshots
 - **Data Lifecycle Manager (DLM)** can be used to automate the creation, retention, and deletion of snapshots of EBS volumes
 
-## Reference:
-* [AWS Documentation](https://docs.aws.amazon.com/ebs/)
-* [Abdur's Notes](https://notes.arkalim.org/notes/aws%20solutions%20architect%20associate/elastic%20block%20storage%20(ebs)/)
+## Reference
+- [AWS Documentation](https://docs.aws.amazon.com/ebs/)
+- [Abdur's Notes](https://notes.arkalim.org/notes/aws%20solutions%20architect%20associate/elastic%20block%20storage%20(ebs)/)
