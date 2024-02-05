@@ -1,6 +1,6 @@
 
 # AWS Solutions Architect - Associate
-This is my preparation notes for AWS Certified Solutions Architect - Associate exam (SAA-C03).
+This is a collection of my preparation notes for AWS Certified Solutions Architect - Associate exam (SAA-C03).
 
 ## Resources
 - [AWS Documentation](https://docs.aws.amazon.com/)
