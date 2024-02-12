@@ -1,3 +1,7 @@
+html {
+    scroll-behavior: smooth;
+}
+
 [data-md-color-scheme="slate"] {
     --md-primary-bg-color: #0D1321;
     --md-primary-fg-color: #F4562A;
