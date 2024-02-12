@@ -1,0 +1,5 @@
+# Databases
+ 
+From Fortune 500 companies to startups, organizations across various industries are increasingly adopting machine learning (ML) for a wide range of use cases, including natural language processing (NLP), computer vision, voice assistants, fraud detection, and recommendation engines. In addition, large language models (LLMs) that have hundreds of billions of parameters are unlocking new generative AI use cases, for example, image and text generation. With the growth of ML applications comes the increased usage, management, and cost of compute, storage, and networking resources. Identifying and choosing the right compute infrastructure is essential for reducing high power consumption, lowering excessive costs, and avoiding complexity during the training and deployment of ML models to production. To help you accelerate your ML innovation, AWS offers the ideal combination of high performance, cost-effective, and energy-efficient purpose-built ML tools and accelerators, optimized for ML applications.
+
+Reference: [AWS Machine Learning Services](https://aws.amazon.com/machine-learning/infrastructure-innovation/)
