@@ -1,0 +1,34 @@
+html {
+    scroll-behavior: smooth;
+}
+
+[data-md-color-scheme="slate"] {
+    --md-primary-bg-color: #0D1321;
+    --md-primary-fg-color: #F4562A;
+    --md-accent-fg-color: #F4562A;
+     
+    
+    --md-typeset-heading-color: #E7EBEF;
+    --md-typeset-color: #C2CED6;
+    --md-typeset-a-color: #3185FC;
+}
+
+.md-header {
+    background-color: var(--md-primary-bg-color);
+    color: var(--md-primary-fg-color);
+}
+
+.md-typeset h1, 
+.md-typeset h2, 
+.md-typeset h3, 
+.md-typeset h4 {
+    color: var(--md-typeset-heading-color);
+}
+
+.md-nav__item .md-nav__link--active {
+    color: var(--md-accent-fg-color);
+}
+
+.md-search__icon[for="__search"] {
+    color: var(--md-typeset-color);
+}
