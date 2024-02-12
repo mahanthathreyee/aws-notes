@@ -54,7 +54,8 @@
 - SageMaker Clarify: Improve your machine learning models by detecting potential bias and help explain the predictions that models make.
 
 ### Workflow
-![SageMaker Workflow](docs/Machine%20Learning/assets/sagemaker_workflow.png)
+
+![SageMaker Workflow](./assets/sagemaker_workflow.png)
 
 ### Resources
 - [AWS Documentation](https://docs.aws.amazon.com/sagemaker/latest/dg/whatis.html)
